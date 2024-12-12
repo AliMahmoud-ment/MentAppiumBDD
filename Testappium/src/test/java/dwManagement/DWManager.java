@@ -67,22 +67,7 @@ public class DWManager {
 	    }
 	    
 		
-	    /*try {
-	         loadProperties();
-	         DesiredCapabilities options = new DesiredCapabilities();         
-	         options.setCapability("deviceName", "iPhone 11");
-	         options.setCapability("platformName", "iOS");
-	         options.setCapability("platformVersion", "16.6.1"); 
-	         options.setCapability("udid", "00008030-001D590E3610402E"); 
-	         options.setCapability("bundleId", "com.deg.mdubai.enterprise");
-	         options.setCapability("automationName", "XCUITest");  
-		     URL appiumServerUrl = new URL(properties.getProperty("APPIUM.SERVER.URL"));
-		     setIOSDriver(new IOSDriver(appiumServerUrl, options));
-		     getIOSDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	       
-	         System.out.println("AndroidDriver initialized successfully.");
-	    } catch (IOException e) {
-	        e.printStackTrace();  
-	    }*/
+	
 	}
 	
 	public IOSDriver getIOSDriver() {

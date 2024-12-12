@@ -54,15 +54,7 @@ public class JavaScriptExecutorUtils {
         executeJavaScript("arguments[0].value='" + value + "';", driver.findElement(by));
     }
 
-    // Method to get the page's current scroll position
-    public Long getScrollPosition() {
-        return (Long) executeJavaScript("return window.scrollY;");
-    }
-
-    // Method to scroll to a specific element using JavaScript
-    public void scrollToElement(By by) {
-        executeJavaScript("arguments[0].scrollIntoView(true);", driver.findElement(by));
-    }
+ 
 
      
 }
