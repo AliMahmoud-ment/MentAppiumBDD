@@ -27,50 +27,13 @@ public class DWManager {
 	protected AndroidUtilities utilities;  
 	protected IOSDriver iosDriver;
 	AndroidUtilities androidUtilities;
-	 public void pushPhoto() {
-	        try {
-	            String photo = System.getProperty("user.dir") + "\\Photo\\attachment.png";
-
-	            // Command to push the image to the emulator
-	            String command = "adb push " + photo + " /sdcard/Download/";
-
-	            // Execute the command
-	            Process process = Runtime.getRuntime().exec(command);
-
-	            // Wait for the command to complete
-	            process.waitFor();
-
-	            // Check if the command was successful
-	            if (process.exitValue() == 0) {
-	                System.out.println("Image uploaded successfully.");
-
-	                // Trigger a media scan so that the photo appears in the Photos app
-	                String mediaScanCommand = "adb shell am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file:///sdcard/Download/attachment.png";
-	                Process mediaScanProcess = Runtime.getRuntime().exec(mediaScanCommand);
-
-	                // Wait for the media scan command to complete
-	                mediaScanProcess.waitFor();
-
-	                // Check if the media scan was successful
-	                if (mediaScanProcess.exitValue() == 0) {
-	                    System.out.println("Media scan completed successfully. Photo should now appear in the Photos app.");
-	                } else {
-	                    System.out.println("Failed to trigger media scan.");
-	                }
-
-	            } else {
-	                System.out.println("Failed to upload the image.");
-	            }
-	        } catch (IOException | InterruptedException e) {
-	            e.printStackTrace();
-	        }
-	    }
+	
 
 
 	//@BeforeSuite
 	public void setUp() throws IOException {
 		System.out.println("Setting up...");
-		pushPhoto();
+		
 	    try {
 	        loadProperties();
 //	        UiAutomator2Options options = new UiAutomator2Options();
