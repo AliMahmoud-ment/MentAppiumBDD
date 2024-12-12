@@ -15,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -41,6 +42,19 @@ public class SeleniumUtils {
 			throw e;
 		}
 	}
+	
+	 public void clickElementWithRetry(By by) {
+		    int attempts = 0;
+		    while (attempts < 3) {
+		        try {
+		        	WebElement element = driver.findElement(by);
+					element.click();
+		        } catch (NoSuchElementException e) {
+		        	System.out.println("Element not found: " + by);
+					throw e;
+		        }
+		    }
+		}
 
 	// Method to enter text into an input field
 	public void enterText(By by, String text) {

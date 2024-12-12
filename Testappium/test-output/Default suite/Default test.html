@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 12 19:46:43 EET 2024</td>
+<td>Started on:</td><td>Thu Dec 12 20:27:29 EET 2024</td>
 </tr>
-<tr><td>Total time:</td><td>84 seconds (84337 ms)</td>
+<tr><td>Total time:</td><td>73 seconds (73445 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,8 +77,59 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='dWTestRunner.DWTestRunner.runScenario()'><b>runScenario</b><br>Test class: dWTestRunner.DWTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Ment-111 - verify Search for a contact and log out", "Verify Login"</td>
-<td></td>
-<td>83</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [666e825c-ef17-42df-b91c-919e6ec051ca, findElement {value=(//android.widget.ImageView[@content-desc=&quot;contacts&quot;])[1], using=xpath}]
+Capabilities {appium:app: C:\Users\ali.mahmoud\git\Te..., appium:appPackage: io.getment.stg, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\ali.mahmoud\git\Te..., appPackage: io.getment.stg, automationName: UiAutomator2, deviceName: emulator-5554, fullReset: false, noReset: false, platformName: ANDROID, platformVersion: 14.0}, appium:deviceApiLevel: 34, appium:deviceManufacturer: unknown, appium:deviceModel: Android SDK built for x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: false, appium:pixelRatio: 3.5, appium:platformVersion: 14, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 666e825c-ef17-42df-b91c-919e6ec051ca
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at Utilities.SeleniumUtils.clickElement(SeleniumUtils.java:38)
+	at dWPageRepo.DWFunctionLibrary.ClickSearchBtn(DWFunctionLibrary.java:77)
+	at dWStepDefinitions.StepDefinitions.user_logged_into_ment_application(StepDefinitions.java:81)
+	at ✽.the user is logged into the MENT app(file:///C:/Users/ali.mahmoud/git/Testappium/Testappium/src/test/resources/Android/Login.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace798516062", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace798516062'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [666e825c-ef17-42df-b91c-919e6ec051ca, findElement {value=(//android.widget.ImageView[@content-desc=&quot;contacts&quot;])[1], using=xpath}]
+Capabilities {appium:app: C:\Users\ali.mahmoud\git\Te..., appium:appPackage: io.getment.stg, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\ali.mahmoud\git\Te..., appPackage: io.getment.stg, automationName: UiAutomator2, deviceName: emulator-5554, fullReset: false, noReset: false, platformName: ANDROID, platformVersion: 14.0}, appium:deviceApiLevel: 34, appium:deviceManufacturer: unknown, appium:deviceModel: Android SDK built for x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: false, appium:pixelRatio: 3.5, appium:platformVersion: 14, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 666e825c-ef17-42df-b91c-919e6ec051ca
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at Utilities.SeleniumUtils.clickElement(SeleniumUtils.java:38)
+	at dWPageRepo.DWFunctionLibrary.ClickSearchBtn(DWFunctionLibrary.java:77)
+	at dWStepDefinitions.StepDefinitions.user_logged_into_ment_application(StepDefinitions.java:81)
+	at ✽.the user is logged into the MENT app(file:///C:/Users/ali.mahmoud/git/Testappium/Testappium/src/test/resources/Android/Login.feature:6)
+</pre></div></td>
+<td>73</td>
 <td>dWTestRunner.DWTestRunner@70325e14</td></tr>
 </table><p>
 </body>

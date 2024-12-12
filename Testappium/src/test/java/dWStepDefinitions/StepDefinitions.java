@@ -74,8 +74,9 @@ public class StepDefinitions extends DWManager {
 		be.ClickStartBtn();  		
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3)); 	
         be.typeText("amahmoud@getment.io");
-        be.clickElementWithRetry(AppiumBy.accessibilityId("Continue"));      
-        be.typeText("As12345!@#"); 
+//       be.clickElementWithRetry(AppiumBy.accessibilityId("Continue"));  
+        be.ClickContinueBtn();
+        be.typeText("As12345###"); 
         be.ClickLoginBtn();
         be.ClickSearchBtn();
         

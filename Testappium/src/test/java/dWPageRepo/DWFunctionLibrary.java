@@ -51,17 +51,7 @@ public class DWFunctionLibrary {
 	
 	
 
-    public void clickElementWithRetry(By locator) {
-	    int attempts = 0;
-	    while (attempts < 3) {
-	        try {
-	            driver.findElement(locator).click();
-	            break;
-	        } catch (StaleElementReferenceException e) {
-	            attempts++;
-	        }
-	    }
-	}
+   
     
     
     public void typeText(String text) {
@@ -85,6 +75,11 @@ public class DWFunctionLibrary {
 	public DWFunctionLibrary ClickSearchBtn() {
 		waitutils.waitForElementPresent(LoginPage.SrchButton, Duration.ofSeconds(30));
 		seleniumutils.clickElement(LoginPage.SrchButton);
+		return this;
+	}
+	public DWFunctionLibrary ClickContinueBtn() {
+		waitutils.waitForElementPresent(LoginPage.ContinueButton, Duration.ofSeconds(30));
+		seleniumutils.clickElement(LoginPage.ContinueButton);
 		return this;
 	}
 

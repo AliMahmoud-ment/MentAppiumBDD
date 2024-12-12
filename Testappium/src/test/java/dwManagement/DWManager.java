@@ -36,12 +36,7 @@ public class DWManager {
 		
 	    try {
 	        loadProperties();
-//	        UiAutomator2Options options = new UiAutomator2Options();
-//	        options.setCapability("deviceName", properties.getProperty("DEVICE.NAME"));
-//	        options.setCapability("app", properties.getProperty("APP.PATH.DW"));
-//	        options.setCapability("autoGrantPermissions", "true"); 
-//	        options.setCapability("appPackage", "ae.smartdubai.dubainow.enterprise");
-//	        options.setCapability("appActivity", "ae.gov.dsg.mdubai.login.SplashScreenActivity");
+//	 
 	        
 	        
 	  	  DesiredCapabilities caps = new DesiredCapabilities();
@@ -52,14 +47,12 @@ public class DWManager {
 	  			caps.setCapability("platformVersion", "14.0");
 	  			caps.setCapability("automationName", "UiAutomator2");
 	  			caps.setCapability("noReset", false);
-//				
+     			caps.setCapability("appPackage", "io.getment.stg");
 				caps.setCapability("fullReset", false);
 
 				driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), caps);
 			
 	        
-//	        URL appiumServerUrl = new URL(properties.getProperty("http://127.0.0.1:4723/ "));
-//	        setDriver(new AndroidDriver(appiumServerUrl, caps));
 	        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	        System.out.println("AndroidDriver initialized successfully.");
 	    } catch (IOException e) {

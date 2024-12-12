@@ -14,5 +14,8 @@ public class LoginPage {
 	public static By LoginButton = AppiumBy.accessibilityId("Login");
 	
 	public static By SrchButton = AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"contacts\"])[1]");
+	public static By ContinueButton = AppiumBy.xpath("//android.widget.Button[@content-desc=\"Continue\"]");
+	
+	
 	
 }
